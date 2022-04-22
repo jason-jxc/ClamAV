@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.48)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Configuration</TITLE>
+<META NAME="description" CONTENT="Configuration">
+<META NAME="keywords" CONTENT="clamdoc">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="clamdoc.css">
+
+<LINK REL="next" HREF="node14.html">
+<LINK REL="previous" HREF="node12.html">
+<LINK REL="up" HREF="node6.html">
+<LINK REL="next" HREF="node14.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html466"
+  HREF="node14.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html462"
+  HREF="node6.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html456"
+  HREF="node12.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html464"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html467"
+  HREF="node14.html">Testing</A>
+<B> Up:</B> <A NAME="tex2html463"
+  HREF="node6.html">Installation</A>
+<B> Previous:</B> <A NAME="tex2html457"
+  HREF="node12.html">Compilation</A>
+ &nbsp <B>  <A NAME="tex2html465"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00037000000000000000">
+Configuration</A>
+</H2>
+    If you are going to use the daemon you have to configure it because
+    it won't run with default settings:
+    <PRE>
+	$ clamd
+	ERROR: Please edit the example config file
+	       /etc/clamav.conf.
+</PRE>
+    This shows a location of the configuration file. The format and
+    options of this file are fully described in the <I>clamav.conf(5)</I>
+    manual. clamd configuration is very easy because the config file is well
+    commented. Remember - you must remove the "Example" directive.
+
+<P>
+Another feature of clamd is on-access scanning based on the Dazuko module,
+    available from <TT><A NAME="tex2html18"
+  HREF="http://dazuko.org">http://dazuko.org</A></TT>. <B>This is not required to
+    run clamd - furthermore, you shouldn't run Dazuko on production systems</B>.
+    A special thread in clamd responsible for a communication with Dazuko
+    is called "Clamuko" (it's due to the funny name of Dazuko - we don't know
+    what Clamuko means). Clamuko is supported on Linux and FreeBSD only.
+    To compile dazuko execute:
+    <PRE>
+	$ tar zxpvf dazuko-a.b.c.tar.gz
+	$ cd dazuko-a.b.c
+	$ make dazuko
+	or
+	$ make dazuko-smp (for smp kernels)
+	$ su
+	# insmod dazuko.o
+	# cp dazuko.o /lib/modules/`uname -r`/misc
+	# depmod -a
+</PRE>
+    Depending on your Linux distribution you have to add a "dazuko" entry to
+<BR>    <I>/etc/modules</I> or something like:
+    <PRE>
+	modprobe dazuko
+</PRE>
+    to some startup file in order to load dazuko at a boot time. Compilation
+    on FreeBSD is very similar. You must also create the <I>/dev/dazuko</I>
+    device:
+    <PRE>
+	$ cat /proc/devices | grep dazuko
+	254 dazuko
+	$ su -c "mknod -m 600 /dev/dazuko c 254 0"
+</PRE>
+    Now just configure Clamuko in <I>clamav.conf</I> and see the <A HREF="node20.html#clamuko">3.3</A>
+    section.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html466"
+  HREF="node14.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html462"
+  HREF="node6.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html456"
+  HREF="node12.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html464"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html467"
+  HREF="node14.html">Testing</A>
+<B> Up:</B> <A NAME="tex2html463"
+  HREF="node6.html">Installation</A>
+<B> Previous:</B> <A NAME="tex2html457"
+  HREF="node12.html">Compilation</A>
+ &nbsp <B>  <A NAME="tex2html465"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Tomasz Kojm
+2004-04-16
+</ADDRESS>
+</BODY>
+</HTML>

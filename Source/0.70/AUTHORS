@@ -1,0 +1,120 @@
+Tomasz Kojm <tkojm*clamav.net>
+home page : http://www.konarski.edu.pl/~zolw
+gpg key   : http://www.clamav.net/gpg/tkojm.gpg
+GPG fingerprint = 0DCA 5A08 407D 5288 279D  B434 5482 2DC8 985A 444B
+Project leader.
+
+Nigel Horne <njh*clamav.net>
+home page : http://bandsman.co.uk
+Author of clamav-milter and the mbox code.
+
+Luca 'NERvOus' Gibelli <luca*clamav.net>
+home page : http://www.nervous.it
+gpg key	  : http://www.clamav.net/gpg/nervoso.gpg
+GPG fingerprint = C782 121E 8C3A 90E3 7A87  D802 6277 8FF4 5EFC 5582
+System administrator (WWW, mailing lists, mirror coordinator, virus
+submission mechanism)
+
+Trog <trog*clamav.net>
+gpg key   : http://www.clamav.net/gpg/trog.gpg
+GPG fingerprint = 35A1 C90A F692 B727 9BBB  2C94 F4F0 D46F 6AF8 3CA3
+OLE2 and VBA decoders, new thread manager in clamd.
+
+Thomas Lamy <tlamy*clamav.net>
+gpg key   : http://www.clamav.net/gpg/tlamy.gpg
+Random hacker.
+
+Submission management interface (for database developers only): Diego d'Ambra
+<diego*clamav.net>, Thomas Madsen <tm*softcom.dk>
+
+Database developers:
+
+aCaB <acab*clamav.net>
+
+Christoph Cordes <cc*clamav.net>
+gpg key   : http://www.clamav.net/gpg/ccordes.gpg
+GPG fingerprint = 4C6F F6A5 6034 04B1 1006  A7E1 1F1B 78CE C6DA 0F00
+
+Diego D'Ambra <diego*clamav.net>
+Jason Englander <jason*clamav.net>
+Tomasz Kojm <tkojm*clamav.net>
+
+Denis De Messemacker <ddm*clamav.net>
+gpg key   : http://www.clamav.net/gpg/ddm.gpg
+GPG fingerprint = E697 81BD A912 3F5A 737E  C254 B3B1 F81A 0278 7880
+
+Tomasz Papszun <tomek*clamav.net>
+gpg key	  : http://www.clamav.net/gpg/tomek.gpg
+GPG fingerprint = F115 0CA4 775D 9898 6F32  0F98 C0C2 2079 C1CA 59EE
+
+Trog <trog*clamav.net> (macro viruses)
+
+
+ClamAV logo: Mia Kalenius and Sergei Pronin <sp*finndesign.fi>
+TrashScan was written by Trashware <trashware*gmx.net>.
+
+libclamav/zziplib: Guido Draheim <guidod*gmx.de>
+libclamav/unrarlib.c: Christian Scheurer and Johannes Winkelmann, see
+							    www.unrarlib.org
+
+ClamAV patches were submitted by (in alphabetical order):
+
+Kamil Andrusz <wizz*mniam.net>
+Patrick Bihan-Faou <patrick*mindstep.com>
+Len Budney <lbudney*pobox.com>
+Andrey Cherezov <andrey*cherezov.koenig.su>
+Tom G. Christensen <tgc*statsbiblioteket.dk>
+Damien Curtain <damien*pagefault.org>
+Michael Dankov <misha*btrc.ru>
+Maxim Dounin <mdounin*rambler-co.ru>
+Alejandro Dubrovsky <s328940*student.uq.edu.au>
+Magnus Ekdahl <magnus*debian.org>
+Jason Englander <jason*englanders.cc>
+Tony Finch <dot*dotat.at>
+David Ford <david+cert*blue-labs.org>
+Michel Gaudet <Michel.Gaudet*ehess.fr>
+Philippe Gay <ph.gay*free.fr>
+Luca 'NERvOus' Gibelli <nervous*clamav.net>
+Nigel Horne <njh*smsltd.demon.co.uk>
+Hrvoje Habjanic <hrvoje.habjanic*zg.hinet.hr>
+Robert Hogan <robert*roberthogan.net>
+James F.  Hranicky <jfh*cise.ufl.edu>
+Andy Igoshin <ai*vsu.ru>
+Jesper Juhl <juhl*dif.dk>
+Nicholas M. Kirsch <nick*kirsch.org>
+Bastian Kleineidam <calvin*debian.org>
+Robbert Kouprie <robbert*exx.nl>
+Martin Kraft <martin.kraft*fal.de>
+Thomas Lamy <Thomas.Lamy*in-online.net>
+Marty Lee <marty*maui.co.uk>
+Peter N Lewis <peter*stairways.com.au>
+David S. Madole <david*madole.net>
+Andrey V. Malyshev <amal*krasn.ru>
+Everton da Silva Marques <everton*lab.ipaccess.diveo.net.br>
+Andrey J. Melnikoff <temnota*kmv.ru>
+Denis De Messemacker <ddm*clamav.net>
+Mark Mielke <mark*mark.mielke.cc>
+Arkadiusz Miskiewicz <misiek*pld.org.pl>
+Dustin Mollo <dustin.mollo*sonoma.edu>
+Dirk Mueller <mueller*kde.org>
+Hendrik Muhs <Hendrik.Muhs*student.uni-magdeburg.de>
+Masaki Ogawa <proc*mac.com>
+Phil Oleson <oz*nixil.net>
+Rudolph Pereira <r.pereira*isu.usyd.edu.au>
+Ed Phillips <ed*UDel.Edu>
+Andreas Piesk <Andreas.Piesk*heise.de>
+Ant La Porte <ant*dvere.net>
+Thomas Quinot <thomas*cuivre.fr.eu.org>
+Hector M. Rulot Segovia <Hector.Rulot*uv.es>
+David Santinoli <david*santinoli.com>
+Vijay Sarvepalli <vssarvep*office.uncg.edu>
+Matthew Seaman <m.seaman*infracaninophile.co.uk>
+Matt Sullivan <matt*sullivan.gen.nz>
+Joe Talbott <josepht*cstone.net>
+Gernot Tenchio <g.tenchio*telco-tech.de>
+Michael L Torrie <torriem*chem.byu.edu>
+Laurent Wacrenier <lwa*teaser.fr>
+David Woakes <david*mitredata.co.uk>
+Dale Woolridge <dwoolridge*drh.net>
+Leonid Zeitlin <lz*europe.com>
+Andoni Zubimendi <andoni*lpsat.net>

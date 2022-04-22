@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.48)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>New system user and group</TITLE>
+<META NAME="description" CONTENT="New system user and group">
+<META NAME="keywords" CONTENT="clamdoc">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="clamdoc.css">
+
+<LINK REL="next" HREF="node12.html">
+<LINK REL="previous" HREF="node10.html">
+<LINK REL="up" HREF="node6.html">
+<LINK REL="next" HREF="node12.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html442"
+  HREF="node12.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html438"
+  HREF="node6.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html432"
+  HREF="node10.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html440"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html443"
+  HREF="node12.html">Compilation</A>
+<B> Up:</B> <A NAME="tex2html439"
+  HREF="node6.html">Installation</A>
+<B> Previous:</B> <A NAME="tex2html433"
+  HREF="node10.html">Requirements</A>
+ &nbsp <B>  <A NAME="tex2html441"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00035000000000000000">
+New system user and group</A>
+</H2>
+    If you are installing ClamAV for the first time, you have to add a new
+    user and group to your system: <A NAME="tex2html17"
+  HREF="footnode.html#foot160"><SUP>3</SUP></A>    <PRE>
+	# groupadd clamav
+	# useradd -g clamav -s /bin/false -c "Clam AntiVirus" clamav
+</PRE>
+    The above method works on Linux and Solaris - in case you don't have
+    <I>groupadd, useradd</I> please consult the system manual.
+    If you are installing ClamAV on a user account you may omit this step with
+    the <code>--disable-clamav</code> option passed to the <code>configure</code> script:
+    <PRE>
+	$ ./configure --disable-clamav
+</PRE>
+    It disables testing for existence of the <I>clamav</I> user and group.
+    <B>clamscan still requires the unprivileged user and group to work
+    in the superuser mode.</B> The password for that account should be locked
+    in <I>/etc/passwd</I> or <I>/etc/shadow</I>.
+
+<P>
+<BR><HR>
+<ADDRESS>
+Tomasz Kojm
+2004-04-16
+</ADDRESS>
+</BODY>
+</HTML>

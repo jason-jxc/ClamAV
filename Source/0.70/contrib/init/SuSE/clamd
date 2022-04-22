@@ -1,0 +1,66 @@
+#! /bin/sh
+# v1.1 03-2004, martin fuxa, yeti@email.cz
+#
+### BEGIN INIT INFO
+# Provides:       clamd
+# Required-Start: 
+# Required-Stop:  
+# Default-Start:  2 3 5
+# Default-Stop:   0 1 2 6
+# Description:    Control clamav daemon.
+### END INIT INFO
+
+# Variables
+PID="/var/run/clamd.pid"
+SBIN="/usr/local/sbin/clamd"
+CONF="/etc/clamav.conf"
+WHAT="Clam AntiVirus"
+
+# Source SuSE config
+. /etc/rc.status
+
+test -x $SBIN || exit 5
+test -e $CONF || exit 5
+
+# First reset status of this service
+rc_reset
+
+# Process request
+case "$1" in
+    start)
+        echo -n "Starting ${WHAT} ${CONF} "
+        ## Start daemon with startproc(8). If this fails
+        ## the echo return value is set appropriate.
+        startproc $SBIN $CONF
+        # Remember status and be verbose
+        rc_status -v
+    ;;
+    stop)
+        echo -n "Shutting down ${WHAT} "
+        ## Stop daemon with killproc(8) and if this fails
+        ## set echo the echo return value.
+        killproc -TERM $SBIN
+        # Remember status and be verbose
+        rc_status -v
+    ;;
+    restart)
+        ## Stop the service and regardless of whether it was
+        ## running or not, start it again.
+        $0 stop
+        $0 start
+        # Remember status and be quiet
+        rc_status
+    ;;
+    status)
+        echo -n "Checking for ${WHAT} "
+        checkproc $SBIN
+        rc_status -v
+    ;;
+
+    *)
+        echo "Usage: $0 {start|stop|status|restart}"
+        exit 1
+    ;;
+esac
+rc_exit
+### END
